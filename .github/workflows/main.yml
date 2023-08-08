@@ -33,7 +33,7 @@ jobs:
 
     - name: Deploy to S3
       run: |
-        aws s3 cp build s3://${{ env.S3_ENVIRONMENT_BUCKET }}/${{ env.Project }}/${{ env.Service }}/ / --recursive
+        aws s3 cp build s3://${{ env.S3_ENVIRONMENT_BUCKET }}/${{ env.Project }}/${{ env.Service }}/ --recursive
 
 env:
   S3_ENVIRONMENT_BUCKET: ${{ secrets.S3_ENVIRONMENT_BUCKET }}
