@@ -1,7 +1,7 @@
 version: 0.2
 env:
   variables:
-    S3_ENVIRONMENT_BUCKET: "new-age-period-app"
+    S3_ENVIRONMENT_BUCKET: "new-period-app-bucket"
     Project: "frontend"
     Service: "service"
     ENVIRONMENT_FILE: "period-app-env"
