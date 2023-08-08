@@ -27,6 +27,10 @@ jobs:
         node-version: 14
 
     - name: Install dependencies and build
+      env:
+          PORT: ${{secrets.PORT}}
+          REACT_APP_API: ${{secrets.REACT_APP_API}}
+          REACT_APP_REDUX_SECRET_KEY: ${{ secrets.REACT_APP_REDUX_SECRET_KEY}}
       run: |
         npm install
         npm run build
