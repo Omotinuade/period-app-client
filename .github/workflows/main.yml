@@ -33,10 +33,11 @@ jobs:
 
     - name: Deploy to S3
       run: |
-        aws s3 cp build s3://${{ env.S3_ENVIRONMENT_BUCKET }}/${{ env.Project }}/${{ env.Service }}/
+        aws s3 cp build s3://${{ env.S3_ENVIRONMENT_BUCKET }}/${{ env.Project }}/${{ env.Service }}/${{ env.ENVIRONMENT_FILE }}.env
 
 env:
   S3_ENVIRONMENT_BUCKET: ${{ secrets.S3_ENVIRONMENT_BUCKET }}
   Project: "frontend" # Change this to your project name
   Service: "service" # Change this to your service name
+  ENVIRONMENT_FILE: "period-app-env"
 
