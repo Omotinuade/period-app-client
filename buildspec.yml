@@ -20,8 +20,7 @@ phases:
       - aws s3 cp s3://${S3_ENVIRONMENT_BUCKET}/${Project}/${Service}/${ENVIRONMENT_FILE} .env
       - echo Build Phase
       - npm run build
-
-  artifacts:
+artifacts:
     files:
       - '**/*'
     discard-path: no
